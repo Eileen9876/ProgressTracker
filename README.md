@@ -14,6 +14,8 @@
 
 方法一：
 ```csharp
+using mylib;
+
 //建立進度追蹤
 ProgressTrack track = new ProgressTrack(this); 
 
@@ -32,6 +34,8 @@ track.Run(() =>
 
 方法二：
 ```csharp
+using mylib;
+
 ProgressTrack track = ProgressTrack.Run(this, () =>
 {
     track.SetMsg("載入資料 ..."); //於視窗中顯示訊息
