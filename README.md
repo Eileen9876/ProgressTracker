@@ -8,7 +8,7 @@
 
 使用者點選取消
 
-<image src="https://github.com/user-attachments/assets/205f5821-75d4-42c1-bbc2-ab306d78678d" width="60%">
+<image src="https://github.com/user-attachments/assets/bdf1462c-9c49-4ed9-b8ef-638c46d76562" width="60%">
 
 ## 使用方法
 
@@ -30,6 +30,8 @@ track.Run(() =>
     ProcData();
     track.CancelCheck(); 
 });
+
+if (track.GetException != null) MessageBox.Show(track.GetException.Message);
 ```
 
 方法二：
@@ -46,5 +48,7 @@ ProgressTrack track = ProgressTrack.Run(this, () =>
     ProcData();
     track.CancelCheck(); 
 });
+
+if (track.GetException != null) MessageBox.Show(track.GetException.Message);
 ```
 
